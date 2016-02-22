@@ -63,3 +63,10 @@ module.exports = app;
 
 
 console.log("Hello world! Testing. Testing.");
+
+var secretsObject = {
+    username: "Sinead",
+    password: 2016
+};
+
+console.log(secretsObject);
