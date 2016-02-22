@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/secrets', function(req, res, next){
-    res.render('index', {title: 'Secrets'})
+    res.render('mySecrets', {title: 'Secrets'})
 });
 
 module.exports = router;
