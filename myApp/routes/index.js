@@ -6,7 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/', function(req, res, next){
+router.get('/index', function(req, res, next){
+    res.render('mySecrets');
+});
+
+router.post('/index', function(req, res, next){
     if(req.body.yourPassword == "2016" && req.body.youName == "Sinead"){
         res.render('mySecrets', {
             yourName:req.body.yourName,
@@ -19,8 +23,10 @@ router.post('/', function(req, res, next){
 });
 
 router.get('/secrets', function(req, res, next){
-    res.render('mySecrets', {title: 'Secrets'})
+    res.render('mySecrets');
 });
+
+
 
 
 module.exports = router;
