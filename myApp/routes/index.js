@@ -11,11 +11,13 @@ router.get('/index', function(req, res, next){
 });
 
 router.post('/index', function(req, res, next){
-    if(req.body.youName === "Sinead" && req.body.yourPassword === 2016){
+    console.log("yourName: " + req.body.yourName);
+    console.log("yourPassword: " + req.body.yourPassword);
+    if(req.body.yourName.trim() == "Sinead" && req.body.yourPassword.trim() == "2016"){
         res.render('mySecrets', {yourName:req.body.yourName, yourPassword:req.body.yourPassword});
     }
     else {
-        res.redirect('/wrongPerson');
+        res.render('wrongPerson');
     }
 });
 
