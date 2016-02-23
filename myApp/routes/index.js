@@ -11,7 +11,7 @@ router.get('/index', function(req, res, next){
 });
 
 router.post('/index', function(req, res, next){
-    if(req.body.yourPassword == "2016" && req.body.youName == "Sinead"){
+    if(req.body.yourPassword == 2016 && req.body.youName == "Sinead"){
         res.render('mySecrets', {
             yourName:req.body.yourName,
             yourPassword:req.body.yourPassword

@@ -3,9 +3,12 @@ html
   head
     title Log in form.
   body
-    form(method="post")
-      lable(for="yourName") username
-      input(type="text", id="youName", name="yourName")
-      label(for="yourPassword") password
-      input(type="password", id="yourPassword", name="yourPassword")
-      input(type="submit")
+    if !yourName
+      form(method="post")
+        lable(for="yourName") username
+        input(type="text", id="youName", name="yourName")
+        label(for="yourPassword") password
+        input(type="password", id="yourPassword", name="yourPassword")
+        input(type="submit")
+    else
+      div Hello #(yourName). Welcome.
