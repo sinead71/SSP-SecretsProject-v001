@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 
 var connection = mysql.createConnection({
     host: 'localhost',
@@ -69,7 +69,7 @@ var connection = mysql.createConnection({
     database: 'secrets'
 });
 
-connection.connect();
+connection.connect();*/
 
 
 

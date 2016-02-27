@@ -25,6 +25,15 @@ router.get('/mySecrets', function(req, res, next){
     res.render('mySecrets');
 });
 
+router.post('/mySecrets', function(req,res,next){
+    if(req.body.newSecret == "I have a dog"){
+        res.render('mySecrets', {newSecret:req.body.newSecret})
+    }
+    else{
+        res.render('mySecrets')
+    } 
+});
+
 
 
 
