@@ -60,16 +60,17 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
+var mysql = require('mysql');
 
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '2016',
+    database: 'secrets'
+});
 
-console.log("Hello world! Testing. Testing.");
+connection.connect();
 
-var secretsObject = {
-    username: "Sinead",
-    password: 2016
-};
-
-console.log(secretsObject);
 
 
 
