@@ -1,7 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+var allSecrets = new Array();
+var secretsNumber = 1;
+
+
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -25,13 +29,21 @@ router.get('/mySecrets', function(req, res, next){
     res.render('mySecrets');
 });
 
-router.post('/mySecrets', function(req,res,next){
-    if(req.body.newSecret == "I have a dog"){
-        res.render('mySecrets', {newSecret:req.body.newSecret})
+router.post('/createSecret', function(req,res,next){
+       
+    var secret = {};
+    secret.id = secretsNumber++;
+    secret.date = new Date();
+    secret.secret = req.body.newSecret;
+    allSecrets.push(secret);
+    
+    console.log(allSecrets);
+    
+    for(i=0; i < allSecrets.length; i++ ){
+         secret: req.body.newSecret;   
     }
-    else{
-        res.render('mySecrets')
-    } 
+    
+    res.render('mySecrets', {newSecret:req.body.newSecret}); 
 });
 
 
