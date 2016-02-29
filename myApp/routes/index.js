@@ -5,8 +5,11 @@ var allSecrets = [];
 var secretsNumber = 1;
 
 
-
 router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+router.post('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
@@ -25,10 +28,6 @@ router.post('/index', function(req, res, next){
     }
 });
 
-router.get('/mySecrets', function(req, res, next){
-    res.render('mySecrets', {allSecrets: allSecrets});
-});
-
 router.post('/createSecret', function(req,res,next){
        
     var secret = {};
@@ -37,9 +36,7 @@ router.post('/createSecret', function(req,res,next){
     secret.secret = req.body.newSecret;
     allSecrets.push(secret);
     
-    console.log(allSecrets);
-
-    //secret: res.body.newSecret;   
+    console.log(allSecrets);  
     
     res.render('mySecrets', {allSecrets: allSecrets}); 
 });

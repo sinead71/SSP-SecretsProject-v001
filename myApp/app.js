@@ -69,6 +69,8 @@ var connection = mysql.createConnection({
     database: 'secrets'
 });
 
+mysql://username:password@url-of-database:3306/nameOfDatabase
+
 connection.connect();*/
 
 
