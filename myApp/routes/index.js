@@ -38,12 +38,10 @@ router.post('/createSecret', function(req,res,next){
     allSecrets.push(secret);
     
     console.log(allSecrets);
+
+    secret: res.body.newSecret;   
     
-    for(i=0; i < allSecrets.length; i++ ){
-         secret: req.body.newSecret;   
-    }
-    
-    res.render('mySecrets', {newSecret:req.body.newSecret}); 
+    res.render('mySecrets', {newSecret: secret}); 
 });
 
 
