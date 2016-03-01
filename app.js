@@ -60,18 +60,7 @@ app.use(function(err, req, res, next) {
 module.exports = app;
 
 
-/*var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '2016',
-    database: 'secrets'
-});
-
-mysql://username:password@url-of-database:3306/nameOfDatabase
-
-connection.connect();*/
 
 
 
