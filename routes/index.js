@@ -42,6 +42,16 @@ router.post('/createSecret', function(req,res,next){
 });
 
 
+router.get('/deleteSecret/:id', function(req, res, next){
+    for(x in allSecrets){
+        if(req.params.id == allSecrets[x].id){
+            allSecrets.splice(x, 1);
+        }  
+        
+    };
+    res.render('mySecrets', {allSecrets: allSecrets});
+});
+
 
 
 module.exports = router;
