@@ -4,14 +4,14 @@ html
     title Log in form.
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    h1 Sign In
-    if !yourName
-      form(action="/index", method="post")
-        input(type="text", id="yourName", name="yourName", placeholder="Username")
-        br 
-        input(type="password", id="yourPassword", name="yourPassword", placeholder="Password")
-        br
-        br
-        input(type="submit", value="Go")
-    else
-      div Hello #(yourName). Welcome.
+    div
+        h1 Sign In
+        if !yourName
+        form(action="/index", method="post")
+            input(type="text", id="yourName", name="yourName", placeholder="Username")
+            br 
+            input(type="password", id="yourPassword", name="yourPassword", placeholder="Password")
+            br
+            br
+            input(type="submit", value="Go")
+        

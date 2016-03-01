@@ -1,7 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #F8F1FF;
+   background-color: #FFF7F8;
 }
 
 a {
@@ -17,7 +17,12 @@ h2{
    color: #32322C;
    margin-left: 13%; 
 }
-    
+
+ h4 {
+     color:gray;
+     margin-left: 13%;
+     
+ }   
 
 form{
     margin-left:13%;  
@@ -32,11 +37,11 @@ input{
 input[type=submit] {
    border-radius: 5px;
    background-color: #13C4A3;
-   width: 5%; 
-   height: 35px;
+   width: 10%; 
+   height: 36px;
 }
 
 ul {
-    margin-left: 15%;
+    margin-left: 13%;
 }
 
